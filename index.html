@@ -122,39 +122,35 @@
     </div>
   </div>
 
-  <script>
-    function sayYes() {
-      document.getElementById("card").innerHTML = `
-        <h1>YAY!!! 💕</h1>
-        <p>
-          You just made my heart the happiest in the world.  
-          I can’t wait to celebrate love, laughter, and us. 💘
-        </p>
-        <h2>Happy Valentine’s Day ❤️</h2>
-      `;
-    }
+ <script>
+  function sayYes() {
+    document.getElementById("card").innerHTML = `
+      <h1>YAY!!! 💕</h1>
+      <p>
+        You just made my heart the happiest in the world.  
+        I can’t wait to celebrate love, laughter, and us. 💘
+      </p>
+      <h2>Happy Valentine’s Day ❤️</h2>
+    `;
+  }
 
-    function moveNo() {
-      const noBtn = document.querySelector(".no");
-      const x = Math.random() * 200 - 100;
-      const y = Math.random() * 200 - 100;
-      const heart = noBtn.createElement("div");
-      heart.innerText = "na nahi bol sakte (option me hi nai hain)";
-      noBtn.body.appendChild(heart);
-      noBtn.style.transform = `translate(${x}px, ${y}px)`;
-    }
+  function moveNo() {
+    const noBtn = document.querySelector(".no");
+    noBtn.innerText = "😌";
+    alert("na nahi bol sakte (option me hi nai hain)");
+  }
 
-    // Floating hearts
-    for (let i = 0; i < 20; i++) {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.innerText = "❤️";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = Math.random() * 3 + 4 + "s";
-      heart.style.fontSize = Math.random() * 20 + 15 + "px";
-      document.body.appendChild(heart);
-    }
-  </script>
+  // Floating hearts
+  for (let i = 0; i < 20; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerText = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+  }
+</script>
 
 </body>
 </html>
